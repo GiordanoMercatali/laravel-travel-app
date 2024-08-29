@@ -9,6 +9,8 @@ class Stage extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'image', 'location', 'description', 'date', 'travel_id'];
+
     public function travel() {
         return $this->belongsTo(Travel::class);
     }
