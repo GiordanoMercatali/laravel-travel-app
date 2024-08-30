@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('stages', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 25);
+            $table->string('name', 50);
             $table->string('image')->nullable();
             $table->string('location', 25);
             $table->string('description', 100)->nullable();

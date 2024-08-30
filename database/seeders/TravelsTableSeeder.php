@@ -32,7 +32,7 @@ class TravelsTableSeeder extends Seeder
             for($i=0; $i<4; $i++){
                 $travel = new Travel();
                 $travel->title = $titles[$i];
-                $travel->cover_image = 'https://picsum.photos/id/'.$faker->numberBetween(10,17).'/400/600';
+                $travel->cover_image = 'https://picsum.photos/id/'.$faker->numberBetween(10,17).'/1280/720';
                 $travel->description = $faker->text(100);
                 
                 $randomStartDate = $this->getRandomDate($startDate, $endDate);
