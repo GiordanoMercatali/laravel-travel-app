@@ -54,6 +54,17 @@
                 </div>
                     @endforeach
             </div>
+
+            <div class="mb-3">
+                <label for="rating" class="form-label"><b>Rating</b></label>
+                <select id="rating" class="form-select" name="rating">
+                    <option value="1" @if(old('rating',$travel->rating) === '1') selected @endif><i class="fa-solid fa-star"></i></option>
+                    <option value="2" @if(old('rating',$travel->rating) === '2') selected @endif><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                    <option value="3" @if(old('rating',$travel->rating) === '3') selected @endif><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                    <option value="4" @if(old('rating',$travel->rating) === '4') selected @endif><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                    <option value="5" @if(old('rating',$travel->rating) === '5') selected @endif><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                </select>
+            </div>
             
             <a class="btn btn-warning" href="{{ route('admin.travels.index') }}"><i class="fa-solid fa-backward"></i></a>
             

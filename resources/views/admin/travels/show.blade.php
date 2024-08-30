@@ -21,10 +21,26 @@
             </li>
 
             <li>
-                <b>Stages:</b>
-                @foreach ($travel->stages as $stage)
-                    <span>{{$stage->name}}</span>
-                @endforeach
+                @if ($travel->rating == 1)
+                    <b>Rating:</b> 1 Star
+                @elseif ($travel->rating == 2)
+                    <b>Rating:</b> 2 Stars
+                @elseif ($travel->rating == 3)
+                    <b>Rating:</b> 3 Stars
+                @elseif ($travel->rating == 4)
+                    <b>Rating:</b> 4 Stars
+                @else
+                    <b>Rating:</b> 5 Stars
+                @endif
+            </li>
+
+            <li>
+                @if ($travel->rating)
+                <b>1 Star</b>
+                @elseif
+                @else
+                <b>È alcolico?</b> No
+                @endif
             </li>
         </ul>
 

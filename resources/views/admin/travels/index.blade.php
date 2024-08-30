@@ -30,6 +30,11 @@
                   <td>{{ $travel->description }}</td>
                   <td>{{ $travel->start_date }}</td>
                   <td>{{ $travel->end_date }}</td>
+                  <td>{{ $travel->rating == 1 ? '1 Star' : 
+                    ($travel->rating == 2 ? '2 Stars' : 
+                    ($travel->rating == 3 ? '3 Stars' : 
+                    ($travel->rating == 4 ? '4 Stars' : 
+                    '5 Stars'))) }}</td>
                   <td>
                     <a class="btn btn-success" href="{{ route('admin.travels.show', ['travel' => $travel->id]) }}"><i class="fa-solid fa-info"></i></a>
                     <a class="btn btn-warning" href="{{ route('admin.travels.edit', ['travel' => $travel->id]) }}"><i class="fa-solid fa-pen-to-square"></i></a>

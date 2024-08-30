@@ -53,6 +53,18 @@
                 </div>
                     @endforeach
             </div>
+
+            <div class="mb-3 ">
+                <label for="rating" class="form-label"><b>Rating</b></label>
+                <select id="rating" class="form-select" name="rating">
+                    <option selected>Rate your travel</option>
+                    <option value="1"><i class="fa-solid fa-star"></i></option>
+                    <option value="2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                    <option value="3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                    <option value="4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                    <option value="5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></option>
+                </select>
+            </div>
             
             <a class="btn btn-warning" href="{{ route('admin.travels.index') }}"><i class="fa-solid fa-backward"></i></a>
             

@@ -9,7 +9,7 @@ class Travel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'cover_image', 'description', 'start_date', 'end_date'];
+    protected $fillable = ['title', 'cover_image', 'description', 'start_date', 'end_date', 'rating'];
 
     public function stages() {
         return $this->hasMany(Stage::class);
