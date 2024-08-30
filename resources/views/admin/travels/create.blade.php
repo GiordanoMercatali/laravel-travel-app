@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mt-5">
 
-        <h2 class="text-center">Create project</h2>
+        <h2 class="text-center">Create Travel</h2>
 
 
         @if ($errors->any())
