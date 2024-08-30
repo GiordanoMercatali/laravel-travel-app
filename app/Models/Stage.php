@@ -11,7 +11,7 @@ class Stage extends Model
 
     protected $fillable = ['name', 'image', 'location', 'description', 'date', 'travel_id'];
 
-    public function travel() {
+    public function travels() {
         return $this->belongsTo(Travel::class);
     }
 }

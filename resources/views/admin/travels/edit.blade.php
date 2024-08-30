@@ -35,13 +35,13 @@
             <div class="mb-3">
                 <label for="start_date" class="form-label">Start Date</label>
                 <input type="date" class="form-control " id="start_date" name="start_date" value="2024-06-01"
-                min="2024-06-01" max="2024-08-30" value="{{ old('start_date', $travel->start_date) }}">
+                min="2024-06-01" max="2024-08-31" value="{{ old('start_date', $travel->start_date) }}">
             </div>
 
             <div class="mb-3">
                 <label for="end_date" class="form-label">End Date</label>
                 <input type="date" class="form-control " id="end_date" name="end_date" value="2024-08-31"
-                min="2024-06-02" max="2024-08-31" value="{{ old('end_date', $travel->end_date) }}">
+                min="2024-06-01" max="2024-08-31" value="{{ old('end_date', $travel->end_date) }}">
             </div>
 
             <div class="mb-3">

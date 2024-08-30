@@ -45,7 +45,7 @@ class TravelController extends Controller
 
     public function edit(Travel $travel)
     {
-        $stages = Travel::all();
+        $stages = Stage::all();
         return view('admin.travels.edit', compact('travel', 'stages'));
     }
 
