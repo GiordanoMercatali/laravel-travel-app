@@ -44,14 +44,13 @@
             </div>
 
             <div class="mb-3">
-                @foreach ($stages as $stage)
+                <label for=""><b>Travel stages</b></label>
+                @foreach($stages as $stage)
                 <div class="form-check">
-                    <label for="stage-{{ $stage->id }}">{{ $stage->name }}</label>
-                    <input @checked(in_array($stage->id, old('stages', []))) type="checkbox" name="stage-id" id="stage-{{ $stage->id }}" value="{{ $stage->id }}">
-                    {{-- in_array() Checks if a value exists in an array --}}
-
+                    <input type="checkbox" name="stages[]" id="stage-{{$stage->id}}" value="{{$stage->id}}">
+                    <label for="stage-{{$stage->id}}">{{$stage->name}}</label>
                 </div>
-                    @endforeach
+                @endforeach
             </div>
 
             <div class="mb-3 ">

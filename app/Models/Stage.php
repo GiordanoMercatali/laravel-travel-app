@@ -15,6 +15,6 @@ class Stage extends Model
     protected $fillable = ['location', 'description'];
 
     public function travels() {
-        return $this->belongsToMany(Travel::class);
+        return $this->belongsToMany(Travel::class, 'travel_stage', 'travel_id', 'stage_id');
     }
 }

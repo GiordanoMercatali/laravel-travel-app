@@ -38,7 +38,7 @@
                 <b>Travel stages:</b>
                     <ul>
                         @foreach ($travel->stages as $stage)
-                            <li>{{$stage->name}} at {{$stage->location}}</li>
+                            <li>{{$stage->location}}</li>
                         @endforeach
                     </ul>
             </li>
