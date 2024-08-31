@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\StageController;
+use App\Http\Controllers\TravelController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('travels', TravelController::class);
+    Route::resource('stages', StageController::class);
 });
