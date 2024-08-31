@@ -17,25 +17,24 @@ class StagesTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $stages = ['Day at the beach', 'A fun hike', 'Sleeping under the palm trees', 'Relaxing under the sun'];
-        $locations = ['Hawaii', 'Maldives', 'Caribbean', 'Portovenere'];
+        // $stages = ['Day at the beach', 'A fun hike', 'Sleeping under the palm trees', 'Relaxing under the sun'];
+        $locations = ['Hawaii', 'Maldives', 'Caribbean', 'Portovenere', 'Santa Teresa', 'The Algarve', 'Mykonos', 'Maiorca', 'Tenerife'];
 
         
-        $travels = Travel::all();
-        $travelIds = $travels->pluck('id')->toArray();
+        // $travels = Travel::all();
+        // $travelIds = $travels->pluck('id')->toArray();
 
-        for($i=0; $i<4; $i++){
-            $travel = $travels[$i]; 
+        foreach($locations as $location){
             $stage = new Stage();
-            $stage->name = $stages[$i];
-            $stage->image = 'https://picsum.photos/id/'.$faker->numberBetween(10,17).'/400/600';
-            $stage->location = $locations[$i];
+            // $stage->name = $stages[$i];
+            // $stage->image = 'https://picsum.photos/id/'.$faker->numberBetween(10,17).'/400/600';
+            $stage->location = $faker->randomElement($locations);
             $stage->description = $faker->text(100);
             
-            $stage->date = Carbon::parse($travel->start_date);
+            // $stage->date = Carbon::parse($travel->start_date);
             
             // $stage->travel_id = $travel->id;
-            $stage->travel_id = $faker->randomElement($travelIds);
+            // $stage->travel_id = $faker->randomElement($travelIds);
             
             $stage->save();
         }

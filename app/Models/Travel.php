@@ -15,6 +15,6 @@ class Travel extends Model
     protected $fillable = ['title', 'cover_image', 'description', 'start_date', 'end_date', 'rating'];
 
     public function stages() {
-        return $this->hasMany(Stage::class);
+        return $this->belongsToMany(Stage::class);
     }
 }

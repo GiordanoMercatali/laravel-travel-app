@@ -11,9 +11,10 @@ class Stage extends Model
     use HasFactory;
     protected $table = 'stages';
 
-    protected $fillable = ['name', 'image', 'location', 'description', 'date', 'travel_id'];
+    // protected $fillable = ['name', 'image', 'location', 'description', 'date', 'travel_id'];
+    protected $fillable = ['location', 'description'];
 
     public function travels() {
-        return $this->belongsTo(Travel::class);
+        return $this->belongsToMany(Travel::class);
     }
 }

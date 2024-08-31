@@ -22,25 +22,25 @@
 
             <li>
                 @if ($travel->rating == 1)
-                    <b>Rating:</b> 1 Star
+                    <b>Rating:</b> <i class="fa-solid fa-star"></i>
                 @elseif ($travel->rating == 2)
-                    <b>Rating:</b> 2 Stars
+                    <b>Rating:</b> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 @elseif ($travel->rating == 3)
-                    <b>Rating:</b> 3 Stars
+                    <b>Rating:</b> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 @elseif ($travel->rating == 4)
-                    <b>Rating:</b> 4 Stars
+                    <b>Rating:</b> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 @else
-                    <b>Rating:</b> 5 Stars
+                    <b>Rating:</b> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 @endif
             </li>
 
             <li>
-                @if ($travel->rating)
-                <b>1 Star</b>
-                @elseif
-                @else
-                <b>È alcolico?</b> No
-                @endif
+                <b>Travel stages:</b>
+                    <ul>
+                        @foreach ($travel->stages as $stage)
+                            <li>{{$stage->name}} at {{$stage->location}}</li>
+                        @endforeach
+                    </ul>
             </li>
         </ul>
 
