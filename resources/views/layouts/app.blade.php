@@ -10,7 +10,7 @@
     <title>Document</title>
 
     {{-- Importare la parte di js e sass tramite vite --}}
-    {{-- @vite('resources/js/app.js') --}}
+    @vite('resources/js/app.js')
 </head>
 <body>
 
