@@ -19,6 +19,7 @@
               <th scope="col">Description</th>
               <th scope="col">Start Date</th>
               <th scope="col">End Date</th>
+              <th scope="col">Rating</th>
             </tr>
           </thead>
           <tbody>
